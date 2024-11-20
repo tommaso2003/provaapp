@@ -1,0 +1,131 @@
+/* Stile globale */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Imposta una larghezza massima */
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.filter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.45;
+    transition: background-color 0.3s ease;
+}
+
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Pulsanti */
+.color-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/* Colori Pantone */
+.pantone-breen {
+    background-color: #6A4E35;
+}
+
+.pantone-shark {
+    background-color: #3E4A52;
+}
+
+.pantone-honey-mustard {
+    background-color: #D9A94A;
+}
+
+.pantone-antier {
+    background-color: #42342A;
+}
+
+/* Hover */
+.color-button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.remove-button {
+    background-color: #333;
+    color: white;
+}
+
+.remove-button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.color-label {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Media query per schermi più piccoli (mobile) */
+@media (max-width: 600px) {
+    .image-container {
+        width: 90%;
+    }
+
+    .color-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}

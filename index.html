@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Questo rende il sito responsive -->
+    <title>Piattaforma con Filtri Colore</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Collega il CSS -->
+</head>
+<body>
+    <h1>Piattaforma con Filtri Colore</h1>
+
+    <!-- Prima immagine -->
+    <div class="image-container">
+        <h2>Immagine 1</h2>
+        <div class="image-wrapper">
+            <img id="image1" src="images/image1.jpg" alt="Immagine da filtrare 1">
+            <div id="filter1" class="filter-overlay"></div>
+        </div>
+        <div class="button-container">
+            <button class="color-button pantone-breen" onclick="applyFilter('filter1', '#6A4E35', 'Pantone Breen')">Pantone Breen</button>
+            <button class="color-button pantone-shark" onclick="applyFilter('filter1', '#3E4A52', 'Pantone Shark')">Pantone Shark</button>
+            <button class="color-button pantone-honey-mustard" onclick="applyFilter('filter1', '#D9A94A', 'Pantone Honey Mustard')">Pantone Honey Mustard</button>
+            <button class="color-button pantone-antier" onclick="applyFilter('filter1', '#42342A', 'Pantone Antier')">Pantone Antier</button>
+        </div>
+        <button class="color-button remove-button" onclick="removeFilter('filter1', 'color-label1')">Rimuovi Filtro</button>
+        <div id="color-label1" class="color-label">Nessun filtro applicato</div>
+    </div>
+
+    <!-- Seconda immagine -->
+    <div class="image-container">
+        <h2>Immagine 2</h2>
+        <div class="image-wrapper">
+            <img id="image2" src="images/image2.jpg" alt="Immagine da filtrare 2">
+            <div id="filter2" class="filter-overlay"></div>
+        </div>
+        <div class="button-container">
+            <button class="color-button pantone-breen" onclick="applyFilter('filter2', '#6A4E35', 'Pantone Breen')">Pantone Breen</button>
+            <button class="color-button pantone-shark" onclick="applyFilter('filter2', '#3E4A52', 'Pantone Shark')">Pantone Shark</button>
+            <button class="color-button pantone-honey-mustard" onclick="applyFilter('filter2', '#D9A94A', 'Pantone Honey Mustard')">Pantone Honey Mustard</button>
+            <button class="color-button pantone-antier" onclick="applyFilter('filter2', '#42342A', 'Pantone Antier')">Pantone Antier</button>
+        </div>
+        <button class="color-button remove-button" onclick="removeFilter('filter2', 'color-label2')">Rimuovi Filtro</button>
+        <div id="color-label2" class="color-label">Nessun filtro applicato</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
